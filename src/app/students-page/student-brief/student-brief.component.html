@@ -1,0 +1,22 @@
+<div class="list-group">
+    <div class="row">
+        <div class="col-md-8">
+            <a href="#" class="list-group-item clearfix list-group-item-info">
+               <div class="row">
+                   <div class="col-md-4">
+                        <h2>Student ID</h2>
+                        <p style="font-size: 125%; margin-left: 50px;">{{student.id}}</p>
+                   </div>
+                   <div class="col-md-4">
+                        <h2>{{student.name}}</h2>
+                        <p style="font-size: 125%;">{{student.address}}</p>
+                   </div>
+                   <div class="col-md-4">
+                        <img [src]="student.imgUrl" [alt]="student.name" class="img-responsive img-thumbnail" style="height: 100px; margin-left: 100px;">
+                   </div>
+               </div>
+            </a>
+        </div>
+    </div>  
+</div>
+
