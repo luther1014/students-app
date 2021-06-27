@@ -1,2 +1,5 @@
-<h2>Students page is ready!</h2>
-<app-student-brief></app-student-brief>
+<app-get-all-students (studentWasSelected)="studentSelected = $event"></app-get-all-students>
+<app-student-details *ngIf="studentSelected; else infoText" [student]="studentSelected"></app-student-details>
+<ng-template #infoText>
+    <p>Please Select a student to view more details...</p>
+</ng-template>

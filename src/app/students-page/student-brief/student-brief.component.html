@@ -1,11 +1,11 @@
 <div class="list-group">
     <div class="row">
         <div class="col-md-8">
-            <a href="#" class="list-group-item clearfix list-group-item-info">
+            <a href="#" class="list-group-item clearfix" (click)="onSelected()">
                <div class="row">
                    <div class="col-md-4">
                         <h2>Student ID</h2>
-                        <p style="font-size: 125%; margin-left: 50px;">{{student.id}}</p>
+                        <p style="font-size: 125%; margin-left: 50px;"><b>{{student.id}}</b></p>
                    </div>
                    <div class="col-md-4">
                         <h2>{{student.name}}</h2>

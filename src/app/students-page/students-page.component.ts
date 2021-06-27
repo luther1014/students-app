@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentsPageComponent implements OnInit {
 
+  studentSelected;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

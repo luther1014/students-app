@@ -1,1 +1,4 @@
-<p>get-all-students works!</p>
+<h2>List of all the Students</h2>
+
+<app-student-brief *ngFor="let studentEle of students" [student]="studentEle" (studentSelected)="onStudentSelected(studentEle)"></app-student-brief>
+
