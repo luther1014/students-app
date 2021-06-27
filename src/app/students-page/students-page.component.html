@@ -1,5 +1,15 @@
-<app-get-all-students (studentWasSelected)="studentSelected = $event"></app-get-all-students>
-<app-student-details *ngIf="studentSelected; else infoText" [student]="studentSelected"></app-student-details>
-<ng-template #infoText>
-    <p>Please Select a student to view more details...</p>
-</ng-template>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-get-all-students (studentWasSelected)="studentSelected = $event"></app-get-all-students>
+        </div>
+        <div class="col-md-12">
+            <app-student-details *ngIf="studentSelected; else infoText" [student]="studentSelected"></app-student-details>
+            <br>
+            <ng-template #infoText>
+                <p>Please Select a student to view more details...</p>
+            </ng-template>
+        </div>
+    </div>
+</div>
+<h2 *ngFor="let msg of messages">{{msg}}</h2>

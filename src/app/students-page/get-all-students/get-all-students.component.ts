@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MessageService } from '../message.service';
+import { StudentDataService } from '../students-data.service';
 
 @Component({
   selector: 'app-get-all-students',
@@ -6,42 +8,14 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./get-all-students.component.css']
 })
 export class GetAllStudentsComponent implements OnInit {
-  students = [
-      {
-        id: 101,
-        name: "Alok",
-        imgUrl: "http://robohash.org/alok",
-        address: "Bangalore",
-        email: "alok101@gmail.com",
-        marks: {
-          Physics: 85,
-          Chemistry: 45,
-          Mathematics: 66,
-          Biology: 88,
-          English: 75
-        }
-      },
-      {
-        id: 102,
-        name: "Aditi",
-        imgUrl: "http://robohash.org/aditi",
-        address: "Delhi",
-        email: "aditi102@gmail.com",
-        marks: {
-          Physics: 33,
-          Chemistry: 80,
-          Mathematics: 88,
-          Biology: 73,
-          English: 79
-        }
-      }
-    
-  ]
+  students = [];
 
   @Output() studentWasSelected = new EventEmitter<any>();
-  constructor() { }
+  constructor(private studentDataService: StudentDataService,private messageService: MessageService) { }
 
   ngOnInit(): void {
+    this.students = this.studentDataService.getStudents();
+    this.messageService.addMessage('Getting all students...')
   }
 
   onStudentSelected(student){
