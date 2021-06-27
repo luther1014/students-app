@@ -14,8 +14,14 @@ export class GetAllStudentsComponent implements OnInit {
   constructor(private studentDataService: StudentDataService,private messageService: MessageService) { }
 
   ngOnInit(): void {
-    this.students = this.studentDataService.getStudents();
+    this.getStudents();
     this.messageService.addMessage('Getting all students...')
+  }
+
+  getStudents() {
+    this.studentDataService.getStudents().subscribe(data => {
+      this.students = data.students;
+    })
   }
 
   onStudentSelected(student){
