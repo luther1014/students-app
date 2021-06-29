@@ -8,6 +8,8 @@ import { StudentsPageComponent } from './students-page/students-page.component';
 import { StudentBriefComponent } from './students-page/student-brief/student-brief.component';
 import { StudentDetailsComponent } from './students-page/student-details/student-details.component';
 import { GetAllStudentsComponent } from './students-page/get-all-students/get-all-students.component';
+import { GetStudentComponent } from './students-page/get-student/get-student.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { GetAllStudentsComponent } from './students-page/get-all-students/get-al
     StudentBriefComponent,
     StudentDetailsComponent,
     GetAllStudentsComponent,
+    GetStudentComponent
 
   ],
   imports: [
     BrowserModule,
-    HttpClientModule  
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

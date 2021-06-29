@@ -12,4 +12,10 @@
         </div>
     </div>
 </div>
-<h2 *ngFor="let msg of messages">{{msg}}</h2>
+<!-- <h2 *ngFor="let msg of messages">{{msg}}</h2> -->
+<app-get-student (idWasEntered)="studentSelected = $event"></app-get-student>
+<app-student-details *ngIf="studentSelected; else infoText" [student]="studentSelected"></app-student-details>
+            <br>
+            <ng-template #infoText>
+                <p>Please Select a student to view more details...</p>
+            </ng-template>

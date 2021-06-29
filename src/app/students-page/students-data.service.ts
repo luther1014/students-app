@@ -42,7 +42,11 @@ export class StudentDataService {
 
     getStudents(): Observable<any> {
         
-        
         return this.http.get<any>('http://localhost:8000/students/')
+    }
+
+    getStudent(id: number): Observable<any> {
+
+        return this.http.get<any>('http://localhost:8000/students/'+ +id)
     }
 }
