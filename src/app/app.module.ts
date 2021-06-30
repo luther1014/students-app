@@ -10,6 +10,9 @@ import { StudentDetailsComponent } from './students-page/student-details/student
 import { GetAllStudentsComponent } from './students-page/get-all-students/get-all-students.component';
 import { GetStudentComponent } from './students-page/get-student/get-student.component';
 import { FormsModule } from '@angular/forms';
+import { NewStudentComponent } from './students-page/new-student/new-student.component';
+import { DeleteStudentComponent } from './students-page/delete-student/delete-student.component';
+import { UpdateStudentComponent } from './students-page/update-student/update-student.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { FormsModule } from '@angular/forms';
     StudentBriefComponent,
     StudentDetailsComponent,
     GetAllStudentsComponent,
-    GetStudentComponent
+    GetStudentComponent,
+    NewStudentComponent,
+    DeleteStudentComponent,
+    UpdateStudentComponent
 
   ],
   imports: [

@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http"; 
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { Student } from "./student";
 
 @Injectable()
 export class StudentDataService {
@@ -48,5 +49,19 @@ export class StudentDataService {
     getStudent(id: number): Observable<any> {
 
         return this.http.get<any>('http://localhost:8000/students/'+ +id)
+    }
+
+    createStudent(newStudent: Student): Observable<any> {
+        return this.http.post<any>('http://localhost:8000/students/',newStudent)
+    }
+
+    deleteStudent(id: number): Observable<any> {
+        const url = `http://localhost:8000/students/${id}`;
+        return this.http.delete(url)
+    }
+
+    updateStudent(student: Student): Observable<any> {
+        const url = `http://localhost:8000/students/${student.id}`
+        return this.http.put(url, student)
     }
 }

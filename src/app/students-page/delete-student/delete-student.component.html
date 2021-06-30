@@ -1,0 +1,11 @@
+<br>
+<h2>Delete Student By ID</h2>
+<form>
+    <div class="form-group">
+      <label for="deleteStudent">Enter Student ID: </label>
+      <input type="number" class="form-control" id="deleteStudent"  placeholder="Enter Student ID" [(ngModel)]="student_id" name="student_id">
+    </div>
+    <button type="submit" class="btn btn-danger" (click)="deleteStudent()">Delete Student</button>
+</form>
+<p *ngIf="studentDeleted">Student successfully deleted</p>
+<br>
