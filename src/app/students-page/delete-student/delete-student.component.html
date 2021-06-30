@@ -7,5 +7,9 @@
     </div>
     <button type="submit" class="btn btn-danger" (click)="deleteStudent()">Delete Student</button>
 </form>
-<p *ngIf="studentDeleted">Student successfully deleted</p>
 <br>
+<div *ngIf="studentDeleted" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Success!!!</h4>
+    <p>Student details with ID <strong>{{student_id}}</strong> was successfully deleted.</p>
+</div>
+
