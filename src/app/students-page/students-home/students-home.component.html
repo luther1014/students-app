@@ -1,0 +1,19 @@
+<h2>Welcome to Students App</h2>
+<br>
+<p>Here you can perform basic operations like Creating a new student, reading student details, updating student details, and deleting student record completely from the Database</p>
+<p>More features will be added soon....</p>
+<br>
+<h4>Start using the app by clicking on any of the following buttons</h4>
+<br>
+<div class="row">
+    <div class="col-xs-5">
+        <button type="button" class="btn btn-info btn-block" [routerLink]="['/students']">View All Students</button>
+        <button type="button" class="btn btn-info btn-block" [routerLink]="['/get-student']">Get Student By ID</button>
+        <button type="button" class="btn btn-info btn-block" [routerLink]="['/create-student']">Create New Student</button>
+    </div>
+    <div class="col-xs-5"> 
+        <button type="button" class="btn btn-info btn-block" [routerLink]="['/update-student']">Update Existing Student</button>
+        <button type="button" class="btn btn-info btn-block" [routerLink]="['/delete-student']">Delete Student Record</button>
+    </div>
+</div>
+

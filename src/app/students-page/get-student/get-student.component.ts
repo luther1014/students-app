@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { Router } from "@angular/router";
+import { Student } from "../student";
 import { StudentDataService } from "../students-data.service";
 
 @Component({
@@ -8,23 +10,25 @@ import { StudentDataService } from "../students-data.service";
 
 export class GetStudentComponent implements OnInit {
 
-    student1: any;
+    student: Student;
     student_id: number;
     @Output() idWasEntered = new EventEmitter<any>();
 
-    constructor(private studentDataService: StudentDataService){
+    // constructor(private studentDataService: StudentDataService){
 
-    }
+    // }
+    constructor(private router: Router) {}
 
     ngOnInit() {
     
     }
 
     getStudent() {
-        this.studentDataService.getStudent(this.student_id).subscribe(data => {
-            console.log(data)
-            this.student1 = data.student;
-            this.idWasEntered.emit(this.student1);
-        })
+        // this.studentDataService.getStudent(this.student_id).subscribe(data => {
+        //     console.log(data)
+        //     this.student = data.student;
+        //     this.idWasEntered.emit(this.student);
+        // })
+        this.router.navigate(['students',this.student_id])
     }
 }

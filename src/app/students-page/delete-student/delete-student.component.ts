@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentDataService } from '../students-data.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { StudentDataService } from '../students-data.service';
 export class DeleteStudentComponent implements OnInit {
 
   student_id: number;
-  constructor(private studentDataService: StudentDataService) { }
+  constructor(private studentDataService: StudentDataService, private router: Router) { }
   studentDeleted = false;
   ngOnInit(): void {
   }
@@ -18,6 +19,7 @@ export class DeleteStudentComponent implements OnInit {
     this.studentDataService.deleteStudent(this.student_id).subscribe(data => {
       console.log(data)
       this.studentDeleted = true;
+      setTimeout(() => {this.router.navigate(['students'])},5000)
     })
   }
 }

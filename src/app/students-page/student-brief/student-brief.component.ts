@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-brief',
@@ -15,13 +16,18 @@ export class StudentBriefComponent implements OnInit {
   @Input() student
   @Output() studentSelected = new EventEmitter<void>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSelected() {
+    this.router.navigate(['students',this.student.id]);
     this.studentSelected.emit();
+  }
+
+  onEdit() {
+    this.router.navigate(['update-student',this.student.id]);
   }
 
 }

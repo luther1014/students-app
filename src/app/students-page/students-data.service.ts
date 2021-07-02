@@ -64,4 +64,13 @@ export class StudentDataService {
         const url = `http://localhost:8000/students/${student.id}`
         return this.http.put(url, student)
     }
+
+    getPercentage(id: number): Observable<any> {
+        const url = `http://localhost:8000/percentage/${id}`
+        return this.http.get<any>(url)
+    }
+
+    getClassToppers(): Observable<any> {
+        return this.http.get<any>('http://localhost:8000/class-topper')
+    }
 }

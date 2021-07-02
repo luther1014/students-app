@@ -1,4 +1,13 @@
 <h2>List of all the Students</h2>
 <br>
-<app-student-brief *ngFor="let studentEle of students" [student]="studentEle" (studentSelected)="onStudentSelected(studentEle)"></app-student-brief>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-student-brief *ngFor="let studentEle of students" [student]="studentEle" (studentSelected)="onStudentSelected(studentEle)"></app-student-brief>
+        </div>
+    </div>
+    
+</div>
+
+
 
