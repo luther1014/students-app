@@ -21,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { StudentDataService } from './students-page/students-data.service';
 import { MessageService } from './students-page/message.service';
 import { ClassToppersComponent } from './students-page/class-toppers/class-toppers.component';
+import { SubjectAvgComponent } from './students-page/subject-avg/subject-avg.component';
+import { SubjectPassComponent } from './students-page/subject-pass/subject-pass.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ClassToppersComponent } from './students-page/class-toppers/class-toppe
     StudentsHomeComponent,
     PageNotFoundComponent,
     HomeComponent,
-    ClassToppersComponent
+    ClassToppersComponent,
+    SubjectAvgComponent,
+    SubjectPassComponent
 
   ],
   imports: [

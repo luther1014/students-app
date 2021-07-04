@@ -1,0 +1,16 @@
+<h2>Subject Pass Percentage</h2>
+<form>
+    <div class="form-group">
+      <label for="getStudent">Enter Subject Name: </label>
+      <input type="text" class="form-control" id="getStudent"  placeholder="Enter Subject" [(ngModel)]="subject_name" name="subject">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="getSubject()">Get Percentage</button>
+</form>
+<br>
+<div *ngIf="subject; else infoText">
+    <h4>Subject Name: {{subject['subject']}}</h4>
+    <h2>Percentage: {{subject.percentage + "%"}}</h2>
+</div>
+<ng-template #infoText>
+    <p>Please Enter the subject name to view percentage.....</p>
+</ng-template>

@@ -73,4 +73,12 @@ export class StudentDataService {
     getClassToppers(): Observable<any> {
         return this.http.get<any>('http://localhost:8000/class-topper')
     }
+
+    getSubjectAvg(): Observable<any> {
+        return this.http.get<any>('http://localhost:8000/avg_score')
+    }
+    getSubjectPercentage(subject): Observable<any> {
+        const url = `http://localhost:8000/pass/${subject}`
+        return this.http.get<any>(url)
+    } 
 }

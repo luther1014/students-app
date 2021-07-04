@@ -8,6 +8,8 @@ import { GetStudentComponent } from "./students-page/get-student/get-student.com
 import { NewStudentComponent } from "./students-page/new-student/new-student.component";
 import { StudentDetailsComponent } from "./students-page/student-details/student-details.component";
 import { StudentsHomeComponent } from "./students-page/students-home/students-home.component";
+import { SubjectAvgComponent } from "./students-page/subject-avg/subject-avg.component";
+import { SubjectPassComponent } from "./students-page/subject-pass/subject-pass.component";
 import { UpdateStudentComponent } from "./students-page/update-student/update-student.component";
 
 const routes: Routes = [
@@ -19,6 +21,8 @@ const routes: Routes = [
     {path: 'update-student/:id', component: UpdateStudentComponent},
     {path: 'delete-student', component: DeleteStudentComponent},
     {path: 'class-toppers', component: ClassToppersComponent},
+    {path: 'subject-avg', component: SubjectAvgComponent},
+    {path: 'subject-pass', component: SubjectPassComponent},
     {path: 'not-found', component: PageNotFoundComponent},
     {path: '**', redirectTo: '/not-found'}
         
