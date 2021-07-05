@@ -3,16 +3,16 @@
 <div class="row">
     <div class="col-md-8">
         <ol class="list-group"  *ngFor="let element of toppers; index as i">
-            <li class="list-group-item list-group-item-primary clearfix">
+            <li class="list-group-item clearfix">
                 <div class="row">
                     <div class="col-md-4">
-                        <h2>{{i+1}}</h2>
+                        <h2 class="label label-primary" style="font-size: 20px; position: relative; top: 17px;">{{i+1}}</h2>
                     </div>
                     <div class="col-md-4">
-                        <h3>{{element[0]}}</h3>
+                        <h3><strong>{{element[0]}}</strong></h3>
                     </div>
                     <div class="col-md-4">
-                        <h3>{{element[1] + " %"}}</h3>
+                        <h3 class="label label-danger" style="font-size: 20px; position: relative; top: 17px;"><strong>{{element[1] + " %"}}</strong></h3>
                     </div>
                 </div>
             </li>

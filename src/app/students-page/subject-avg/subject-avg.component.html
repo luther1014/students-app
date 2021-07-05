@@ -6,9 +6,9 @@
             <li class="list-group-item list-group-item-primary">
                 <h2>{{subject['subject']}}</h2>
                     <div class="progress">
-                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" [aria-valuenow]="subject.avg_score"
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" [aria-valuenow]="subject.avg_score"
                     aria-valuemin="0" aria-valuemax="100" [style.width]="(subject.avg_score / 100 * 100) + '%'">
-                    {{subject.avg_score}}
+                    <strong>{{subject.avg_score}}</strong>
                     </div>
                 </div>
             </li>
